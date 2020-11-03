@@ -1,8 +1,15 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const db = require("./config/mongoose");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const port = 8000;
+
+// fetching post req
+app.use(express.urlencoded());
+
+// setting up the cookie parser
+app.use(cookieParser());
 
 // Express Layouts
 app.use(expressLayouts);
