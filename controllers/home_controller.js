@@ -1,11 +1,9 @@
-const { builtinModules } = require("module");
-
 module.exports.home = function (req, res) {
+  // console.log(req.cookies);
+  // res.cookie('user_id', 25);
   return res.render("home", {
-    title: "home",
+    title: "Home",
   });
 };
 
-// module.exports.action = function (req, res) {
-//   return res.end("<h1>This is the action controller</h1>");
-// };
+// module.exports.actionName = function(req, res){}
